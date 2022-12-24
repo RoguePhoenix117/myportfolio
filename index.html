@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-    
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!--Boostrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
     <!--Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/styles.css" <title>Matthew's Portfolio Showcase</title>
 
-    <title>Matthew's Portfolio Showcase</title>
-    
 </head>
 
 <body>
@@ -25,58 +27,177 @@
                     <h1>Fun in the clouds</h1>
                     <h2>A portfolio of my projects and ideas</h2>
                 </div>
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a role="button" class="btn btn-lg btn-danger" id="contactMe">Contact Me</a>
+                </div>
             </div>
         </div>
     </header>
-
+    <div id="contactMeModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Contact Me</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label" for="typeOfContact">What would you like?</label>
+                                <div class="col">
+                                    <select class="form-control" name="typeOfContact" id="typeOfContact">
+                                        <option>Select</option>
+                                        <option value="employment">I have an employment opportunity</option>
+                                        <option value="freelance">I have a freelance project request</option>
+                                        <option value="getToKnow">I would like to get to know you</option>
+                                        <option value="learnMore">I would like to learn how you do...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">How should I contact you?</label>
+                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="contactMethod" id="contactEmail" autocomplete="off"
+                                            checked>Email
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="contactMethod" id="contactPhone"
+                                            autocomplete="off">Phone
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label" for="formEmail">Leave your email here:</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="email" id="formEmail" name="formEmail"
+                                        placeholder="your email here">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label" for="formPhone">Phone Number(optional)</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="phone" id="formPhone" name="formPhone"
+                                        placeholder="1-888-888-8888">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Reason for contact?</label>
+                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="contactReason" id="contactBusiness" autocomplete="off"
+                                            checked>Business
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="contactReason" id="contactPersonal"
+                                            autocomplete="off">Personal
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="moreInformation">More Information</label>
+                                <textarea class="form-control" id="moreInformation" rows="3"></textarea>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--The body of the main page-->
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-md-3">
-                <h2>Head in the clouds</h2>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-has-bg click-col">
+                    <img class="card-img"
+                        src="img/Matthew_Linsley_A_gigantic_aquatic_monster_composed_of_water_wi_d52d49ac-9e6c-4cb1-9465-67e5dbc43241.png"
+                        alt="Monster">
+                    <div class="card-img-overlay d-flex flex-column" id="monster">
+                        <div class="card-body text-center">
+                            <a class="collapsed" data-toggle="collapse" data-target="#blog">
+                                <h5 class="card-title text-white">My Blog</h5>
+                            </a>
+                            <div class="collapse" id="blog">
+                                <h6 class="card-subtitle mb-2">Head in the clouds</h6>
+                                <p class="card-text">Explore my thoughts and blog posts</p>
+                                <a href="#" role="button" class="btn btn-danger" id="blogLink">Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <h3>My Blog</h3>
-                <p>Explore my thoughts and blog posts</p>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-has-bg click-col">
+                    <img class="card-img" src="img/ASCII Ocean.png" alt="Monster">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="card-body text-center" id="ASCII">
+                            <a class="collapsed" data-toggle="collapse" data-target="#projects">
+                                <h5 class="card-title text-white">My Projects</h5>
+                            </a>
+                            <div class="collapse" id="projects">
+                                <h6 class="card-subtitle mb-2">Portfolio</h6>
+                                <p class="card-text">Review my projects and free downloads</p>
+                                <a href="#" role="button" class="btn btn-danger" id="projectsLink">Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-has-bg click-col">
+                    <img class="card-img"
+                        src="img/Matthew_Linsley_High_Fantasy_Style_oil_painting_dwarf_fortress__149d2bec-c2cf-4c68-83f6-81db99836943.png"
+                        alt="Monster">
+                    <div class="card-img-overlay d-flex flex-column" id="goblins">
+                        <div class="card-body text-center">
+                            <a class="collapsed" data-toggle="collapse" data-target="#links">
+                                <h5 class="card-title text-white">Learn</h5>
+                            </a>
+                            <div class="collapse" id="links">
+                                <h6 class="card-subtitle mb-2">Fun Websites</h6>
+                                <p class="card-text">Education resources and fun websites</p>
+                                <a href="#" role="button" class="btn btn-danger" id="funLinks">Fun Stuff</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-4 col-md-3">
-                <h2>Discovery</h2>
-            </div>
-            <div class="col">
-                <h3>My Projects</h3>
-                <p>Discover and explore the interesting ideas and projects on this portfolio</p>
+            <div class="col mb-4">
+                <div class="card card-has-bg click-col">
+                    <img class="card-img" src="img/Dwarven fortress in winter moutain range.jpg" alt="Monster">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="card-body text-center" id="fortress">
+                            <a class="collapsed" data-toggle="collapse" data-target="#aboutMe">
+                                <h5 class="card-title text-dark">About Me</h5>
+                            </a>
+                            <div class="collapse" id="aboutMe">
+                                <h6 class="card-subtitle mb-2">Resume and Background</h6>
+                                <p class="card-text">Learn about me</p>
+                                <a href="#" role="button" class="btn btn-danger" id="aboutMeLink">About Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-4 col-md-3">
-                <h2>Learn</h2>
-            </div>
-            <div class="col">
-                <h3>Links to fun websites</h3>
-                <p>Explore a world of tools and education resources available to anyone with a thirst to learn</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4 col-md-3">
-                <h2>About Me</h2>
-            </div>
-            <div class="col">
-                <h3>The most interesting topic of all</h3>
-                <p>Bio, education, work experience, resume</p>
-            </div>
-        </div>
     </div>
 
 
     <footer>
         <div class="container">
-            <div class="row">             
+            <div class="row">
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
@@ -87,23 +208,30 @@
                         <li><a href="#">About Me</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-sm-5">
+                <div class="col-6 col-sm-5 text-center">
                     <h5>Social</h5>
-                    <a href="http://instagram.com/">Instagram</a>
-                    <a href="http://facebook.com/">Facebook</a>
-                    <a href="http://twitter.com/">Twitter</a>
-                    <a href="http://youtube.com/">YouTube</a>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
+                            class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                            class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                            class="fa fa-youtube"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/"><i
+                            class="fa fa-linkedin"></i></a>
                 </div>
-                <div class="col-sm-4">
-                    Email: phoenixstar117@gmail.com
-                </div>                
-           </div>
+            </div>
         </div>
     </footer>
-    
+
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

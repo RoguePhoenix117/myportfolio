@@ -1,0 +1,17 @@
+$(function(){
+    $("#contactMe").click(function(){
+        $("#contactMeModal").modal("show");
+    });
+    $('#monster').click(function(){
+        $('#blog').collapse("toggle");
+    });
+    $('#ASCII').click(function(){
+        $('#projects').collapse("toggle");
+    });
+    $('#goblins').click(function(){
+        $('#links').collapse("toggle");
+    });
+    $('#fortress').click(function(){
+        $('#aboutMe').collapse("toggle");
+    });
+});
